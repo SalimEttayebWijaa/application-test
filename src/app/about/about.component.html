@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Contact US</h1>
+                </div>
+                <form>
+                    <form [formGroup]="aboutForm" (ngSubmit)="postAbout()">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                          <input formControlName="fullname" type="fullname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write your full Name here">
+                        
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="write your email here">
+                          
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Mobile Phone</label>
+                            <input formControlName="mobile" type="mobile" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="write your phone number">
+                          
+                          </div>
+
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1" style="color: ivory;">Write Here your text !</label>
+                                <textarea formControlName="textabout" type="textabout" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="write here your text"></textarea>
+                              </div>
+                          
+                        </div>
+                       
+                        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                    </form>
+                      
+                      
+                      <a routerLink="/register-employee" style="color: ivory;">New user ? click to register !</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

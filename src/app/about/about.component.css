@@ -1,0 +1,19 @@
+.card {
+    margin-top: 10px;
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(108, 106, 223);
+    background: linear-gradient(90deg, rgb(108, 106, 223) 0%, rgb(108, 106, 223) 100%);
+}
+
+.form-label {
+    color: ivory;
+}
+.text-center {
+    color :ivory
+}

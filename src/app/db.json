@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "aaaaaaaa",
+      "lastName": "aaaaaaaa",
+      "email": "aaaaaaa@gmail.com",
+      "salary": ""
+    },
+    {
+      "id": 2,
+      "firstName": "haithem",
+      "lastName": "testtestz",
+      "email": "aaaa@test.com",
+      "salary": "10.0007$"
+    }
+  ],
+
+  "about": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
