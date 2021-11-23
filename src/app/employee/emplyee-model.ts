@@ -5,5 +5,5 @@ export class EmployeeModel {
     email: string = '';
     phone: string = '';
     salary: string = '';
-
+    term : string;
 }

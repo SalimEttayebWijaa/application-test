@@ -11,7 +11,12 @@ import { HttpClientModule} from '@angular/common/http';
 import { RegisterEmployeeComponent } from './register-employee/register-employee.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { EmplacementComponent } from './emplacement/emplacement.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -20,7 +25,8 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
     EmployeeComponent,
     RegisterEmployeeComponent,
     LoginComponent,
-    AboutComponent
+    AboutComponent,
+    EmplacementComponent
     
  
   ],
@@ -33,7 +39,16 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgxPaginationModule,
+    Ng2OrderModule,
+    Ng2SearchPipeModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDsf0yTyIqDS8MDK0rWoRS7kRkvOPYXPxs',
+      libraries : ['places']
+    })
+
+    
     
   ],
 

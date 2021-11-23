@@ -1,9 +1,7 @@
-import { MatPaginatorModule } from '@angular/material/paginator';
 import { ApiService } from './../shared/api.service';
 import { EmployeeModel } from './emplyee-model';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatPaginator } from '@angular/material';
 
 
 @Component({
@@ -19,7 +17,8 @@ export class EmployeeComponent implements OnInit {
   showUpdate !: boolean;
   employeeData !: any;
   employeeModelObj: EmployeeModel = new EmployeeModel();
-  EmployeeModel: any;
+  EmployeeModel: EmployeeModel[] = [];
+  firstName : any;
 
 
   constructor(private formBuilder: FormBuilder,
@@ -69,6 +68,7 @@ getAllEmployee() {
     this.employeeData =res;
   })
 }
+
 deleteEmployee(row : any){
 
   this.api.deleteEmployee(row.id)

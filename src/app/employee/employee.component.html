@@ -6,6 +6,8 @@
   
         <div class="d-flex">
           <button routerLink="/about" type="button" class="btn btn-primary"> A propos </button>
+          <button routerLink="/emplacement" type="button" class="btn btn-primary"> Emplacement </button>
+
 
             <button (click)="clickAddEmployee()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
                 Add employee
@@ -26,7 +28,7 @@
             <div class="row">
 
               <div class="input-group col-md-4">
-                  <input class="form-control py-2" type="search" value="search" id="example-search-input">
+                  <input class="form-control py-2" type="text" placeholder="Search Here" [(ngModel)]="term">
                   <span class="input-group-append">
                       <button class="btn btn-outline-primary  mx-5" type="button">
                          search <i class="fa fa-search"></i>
@@ -39,7 +41,7 @@
         
     </thead>
     <tbody>
-        <tr *ngFor="let row of employeeData">
+        <tr *ngFor="let row of employeeData | filter:term">
          <td>{{row.id}}</td>
          <td>{{row.firstName}}</td>
          <td>{{row.lastName}}</td>
@@ -99,9 +101,15 @@
       </div>
     </div>
   </div>
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
-
-  </mat-paginator>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
  
 
 
