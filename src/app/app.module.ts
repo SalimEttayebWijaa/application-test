@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RegisterEmployeeComponent } from './register-employee/register-employee.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
@@ -19,6 +19,10 @@ import { EmplacementComponent } from './emplacement/emplacement.component';
 import { AgmCoreModule } from '@agm/core';
 
 
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,7 @@ import { AgmCoreModule } from '@agm/core';
     RegisterEmployeeComponent,
     LoginComponent,
     AboutComponent,
-    EmplacementComponent
+    EmplacementComponent,
     
  
   ],
@@ -44,7 +48,7 @@ import { AgmCoreModule } from '@agm/core';
     Ng2OrderModule,
     Ng2SearchPipeModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDsf0yTyIqDS8MDK0rWoRS7kRkvOPYXPxs',
+      apiKey: '',
       libraries : ['places']
     })
 

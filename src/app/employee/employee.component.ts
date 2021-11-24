@@ -2,6 +2,7 @@ import { ApiService } from './../shared/api.service';
 import { EmployeeModel } from './emplyee-model';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { PageEvent } from '@angular/material';
 
 
 @Component({
@@ -11,6 +12,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 
 export class EmployeeComponent implements OnInit {
+
+  //test pagination
   firstname : any;
   formValue !: FormGroup;
   showAdd !: boolean;
@@ -18,9 +21,7 @@ export class EmployeeComponent implements OnInit {
   employeeData !: any;
   employeeModelObj: EmployeeModel = new EmployeeModel();
   EmployeeModel: EmployeeModel[] = [];
-  firstName : any;
-
-
+  
   constructor(private formBuilder: FormBuilder,
     private api: ApiService) { }
 
@@ -29,7 +30,7 @@ export class EmployeeComponent implements OnInit {
       firstName: [''],
       lastName: [''],
       email: [''],
-      Phone: [''],
+      phone: [''],
       salary: ['']
 
     })
@@ -69,6 +70,8 @@ getAllEmployee() {
   })
 }
 
+
+
 deleteEmployee(row : any){
 
   this.api.deleteEmployee(row.id)
@@ -103,9 +106,6 @@ updateEmployeeDetails() {
     })
 
 }
-//Search () {
-  //this.EmployeeModel = this.EmployeeModel.filter(res => {
-    //return res.firstName.toLocaleLowerCase().match(this.firstname.toLocaleLowerCase());
-  //}) ;
-//}
+
+
 }
